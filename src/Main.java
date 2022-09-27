@@ -17,13 +17,13 @@ public class Main
         //Scanner class to read user input
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Please enter num1: ");
+        System.out.print("Please enter the first number: ");
         int num1 = scanner.nextInt();
 
         System.out.print("Please enter the operator (+, -, * or /): ");
         char operator = scanner.next().charAt(0);
 
-        System.out.print("Please enter num2: ");
+        System.out.print("Please enter the second number: ");
         int num2 = scanner.nextInt();
 
         //instantiating my object
