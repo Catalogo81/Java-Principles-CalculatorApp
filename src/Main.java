@@ -3,9 +3,9 @@ import calculationclass.Calculation;
 import java.util.Scanner;
 
 /**
- * Java Program of a simple calculation functionality.
+ * Java Program of a simple calculation application.
  * This application produces calculation of addition, subtraction, division, and multiplication
- * With a Calculation class that has calculation methods.
+ * With a Calculation class that has calculation methods and an overloaded constructor.
  *
  * @author Kgotso Matjato
  */
@@ -14,6 +14,7 @@ public class Main
 {
     public static void main(String[] args)
     {
+        //Scanner class to read user input
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please enter num1: ");
@@ -25,25 +26,26 @@ public class Main
         System.out.print("Please enter num2: ");
         int num2 = scanner.nextInt();
 
-        Calculation calculation = new Calculation();
-        Calculation calculation2 = new Calculation(5,5);
+        //instantiating my object
+        Calculation calculation = new Calculation(num1,num2);
 
+        //condition statement to check which operator the user chooses to perform the calculation
         switch(operator)
         {
-            case '+':
-                System.out.println(num1 + " + " + num2 + " = " + calculation.add(num1, num2));
+            case '+': //addition
+                System.out.println(num1 + " + " + num2 + " = " + calculation.add());
                 break;
 
-            case '-':
-                System.out.println(num1 + " - " + num2 + " = " + calculation.subtract(num1, num2));
+            case '-': //subtraction
+                System.out.println(num1 + " - " + num2 + " = " + calculation.subtract());
                 break;
 
-            case '*':
-                System.out.println(num1 + " * " + num2 + " = " + calculation.multiply(num1, num2));
+            case '*': //multiplication
+                System.out.println(num1 + " * " + num2 + " = " + calculation.multiply());
                 break;
 
-            case '/':
-                System.out.println(num1 + " / " + num2 + " = " + calculation.divide(num1, num2));
+            case '/': //division
+                System.out.println(num1 + " / " + num2 + " = " + calculation.divide());
                 break;
 
             default:
